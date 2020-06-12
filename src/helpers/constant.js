@@ -10,10 +10,10 @@ exports.DEFAULT_OPTIONS = {
   sa: {
     id: '',
     config: {
-      show_log: true,
-      sdk_url: 'https://res06.bignox.com/noxfed/scripts/sensorsdata.min.js',
+      show_log: false,
+      sdk_url: '',
       name: 'sensors',
-      server_url: 'https://bi.noxgroup.com/sa',
+      server_url: '',
     },
     global: {},
   },
