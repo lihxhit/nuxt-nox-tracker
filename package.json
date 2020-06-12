@@ -1,0 +1,15 @@
+{
+  "name": "nuxt-nox-tracker",
+  "version": "1.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "noxfed-lsn",
+  "keywords": ["nuxt","gtag","sensor","sa","神策"],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/lihxhit/nuxt-nox-tracker.git"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.15"
+  }
+}
