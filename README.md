@@ -26,7 +26,8 @@ $ npm install nuxt-nox-tracker -D
         name:'sensors',   // global variable in window, default 'sensors'
         server_url:'your track server url' //  required
         ...
-        // Full config list please refer to https://manual.sensorsdata.cn/sa/latest/sdk-api-web-7549300.html#
+        // Full config list please refer to
+        https://manual.sensorsdata.cn/sa/latest/sdk-api-web-7549300.html#
       }
     },
   },
