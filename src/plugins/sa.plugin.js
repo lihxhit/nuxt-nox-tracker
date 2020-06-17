@@ -1,8 +1,8 @@
 import Vue from 'vue';
 const ID = '<%= options.id %>'
 const NAME = '<%= options.config.name %>'
-export default function ({ app: { router } }, inject) {
-  ;(function (para) {
+export default function ({ app: { head, router } }, inject) {
+  ; (function (para) {
     const p = para.sdk_url
     const n = para.name
     const w = window
@@ -18,7 +18,7 @@ export default function ({ app: { router } }, inject) {
       w[n] ||
       function (a) {
         return function () {
-          ;(w[n]._q = w[n]._q || []).push([a, arguments])
+          ; (w[n]._q = w[n]._q || []).push([a, arguments])
         }
       }
     const ifs = [
@@ -56,14 +56,18 @@ export default function ({ app: { router } }, inject) {
     }
   })(<%= JSON.stringify(options.config, null, 2) %>);
   window[NAME].registerPage({
-      product:ID,
-      type:'web'
+    product: ID,
+    type: 'web'
   });
-  router.afterEach(() => {
+
+  window[NAME].quick(
+    'autoTrackSinglePage'
+  )
+  head['afterNavigation'] = () => {
     Vue.nextTick(() => {
       window[NAME].quick(
         'autoTrackSinglePage'
       )
     })
-  })
+  }
 }
